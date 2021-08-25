@@ -1,6 +1,6 @@
 
-input_filename = "resources/celsius-data.txt"
-output_filename = "output/fahrenheit-data1.txt"
+input_filename = "../resources/celsius-data.txt"
+output_filename = "../output/fahrenheit-data1.txt"
 
 def convert_temps():
     # open input file and read all lines into a list

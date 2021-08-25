@@ -1,6 +1,4 @@
-import pytest
-
-from hw0_p1 import convert_c_to_f
+from week1.hw1 import convert_c_to_f
 
 
 def test_convert_positive_int():
