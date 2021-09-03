@@ -17,5 +17,5 @@ tools/*/*
 *.iws
 .DS_Store
 */venv
-*/output
+
 
