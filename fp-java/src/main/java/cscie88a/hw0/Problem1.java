@@ -9,7 +9,6 @@ import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.OptionalDouble;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
@@ -24,14 +23,11 @@ public class Problem1 {
             System.err.println("Invalid temperature in C. The input value: " + line);
             return Optional.empty();
         }
- }
+    }
 
     public List<String> readFile(String fileName) {
-
         List<String> list = new ArrayList<>();
-
         try (Stream<String> stream = Files.lines(Paths.get(fileName))) {
-
             //1. filter line that starts with #
             //2. convert C to F
             //3. ignore Bad values in C
@@ -50,7 +46,6 @@ public class Problem1 {
     }
 
     public int writeFile(List<String> list, String fileName) {
-        Path p = Paths.get(fileName);
         Charset utf8 = StandardCharsets.UTF_8;
         try {
             Files.write(Paths.get(fileName), list, utf8);
@@ -58,6 +53,5 @@ public class Problem1 {
             e.printStackTrace();
         }
         return list.size();
-
     }
 }
