@@ -1,10 +1,7 @@
 package cscie88a.hw0;
 
 import org.junit.jupiter.api.BeforeAll;
-import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.Optional;
@@ -16,8 +13,7 @@ class Problem1Test {
     private static Problem1 problem1;
 
     @BeforeAll
-    static void setUpBeforeClass() throws Exception {
- //       generateTestData();
+    static void setUpBeforeClass() {
         problem1 = new Problem1();
     }
 
