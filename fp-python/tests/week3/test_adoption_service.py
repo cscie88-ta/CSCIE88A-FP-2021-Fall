@@ -8,6 +8,7 @@ def test_try_to_adopt_no_arg_lambda():
 
 
 # TODO implement this - for two values of adoption_fee_paid: True and False
+# and two values of health_check_done: True and False
 def test_try_to_adopt_one_arg_lambda():
     pass
 
@@ -18,6 +19,7 @@ def test_try_to_adopt_no_arg_lambda_named():
 
 
 # TODO implement this - for two values of adoption_fee_paid: True and False
+# and two values of health_check_done: True and False
 def test_try_to_adopt_one_arg_lambda_named():
     pass
 
@@ -28,6 +30,7 @@ def test_try_to_adopt_no_arg_method_ref():
 
 
 # TODO implement this - for two values of adoption_fee_paid: True and False
+# and two values of health_check_done: True and False
 def test_try_to_adopt_one_arg_method_ref():
     pass
 
