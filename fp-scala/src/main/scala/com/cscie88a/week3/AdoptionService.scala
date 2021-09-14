@@ -2,13 +2,17 @@ package com.cscie88a.week3
 
 // complete the method definitions below
 object AdoptionService {
-    def tryToAdoptNoArg(isAdoptionFeePaid: Boolean)(
+  def tryToAdoptNoArg(
+      isAdoptionFeePaid: Boolean
+    )(
       readyForAdoptionNoArg: () => Boolean
-  ): Boolean = ???
+    ): Boolean = ???
 
   def tryToAdoptOneArg(
       healthCheckDone: Boolean,
       isAdoptionFeePaid: Boolean
-  )(readyForAdoptionOneArg: Boolean => Boolean): Boolean = ???
+    )(
+      readyForAdoptionOneArg: Boolean => Boolean
+    ): Boolean = ???
 
 }
