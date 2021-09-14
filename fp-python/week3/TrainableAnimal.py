@@ -18,9 +18,10 @@ class TrainableAnimal:
         else:
             return False
 
+    # example of assigning a function to a variable
+    another_do_trick_one_arg = do_trick_one_arg
+
     def get_trick_function(self):
         print("Returning do_trick_one_arg() function ...")
         return self.do_trick_one_arg
 
-    # example of assigning a function to a variable
-    another_do_trick_one_arg = do_trick_one_arg

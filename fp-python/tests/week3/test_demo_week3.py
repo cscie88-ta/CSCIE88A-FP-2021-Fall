@@ -45,10 +45,11 @@ def test_train_for_tricks_one_arg():
     assert result
 
     # implementation of the do_trick_one_arg_fn with LESS simple logic
+    trick_name = 'jump'
     result = train_for_tricks_one_arg(
-        lambda trick_name_param: True if trick_name == 'jump' else False, trick_name)
+        lambda trick_name_param: True if trick_name_param == 'jump' else False, trick_name)
     print("result = {}".format(result))
-    assert not result
+    assert result
 
 
 # use named lambda with one argument as a function parameter
@@ -61,7 +62,7 @@ def test_train_for_tricks_one_arg_named():
     assert result
 
     # implementation of the do_trick_one_arg_fn with LESS simple logic
-    my_do_trick_one_arg_fn = lambda trick_name_param: True if trick_name == 'jump' else False
+    my_do_trick_one_arg_fn = lambda trick_name_param: True if trick_name_param == 'jump' else False
     result = train_for_tricks_one_arg(my_do_trick_one_arg_fn, trick_name)
     print("result = {}".format(result))
     assert not result
