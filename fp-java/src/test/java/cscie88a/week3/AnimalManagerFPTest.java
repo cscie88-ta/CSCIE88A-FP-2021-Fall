@@ -100,4 +100,53 @@ class AnimalManagerFPTest {
         assertFalse(result);
     }
 
+    /**
+     * Lambda function implementing ITrainable1 interface -
+     * with no arguments and no return value;
+     * no action in the body
+     */
+    @Test
+    public void testDoAnyTrick1_doNothing(){
+        boolean result = AnimalManagerFP.doAnyTrick1(
+                () -> { }
+        );
+        assertTrue(result);
+    }
+
+    /**
+     * Lambda function implementing ITrainable2 interface -
+     * with no arguments but with a return value
+     */
+    @Test
+    public void testDoAnyTrick2(){
+        boolean result = AnimalManagerFP.doAnyTrick2(
+                () -> true
+        );
+        assertTrue(result);
+    }
+
+    /**
+     * Lambda function implementing ITrainable3 interface -
+     * with multiple arguments
+     */
+    @Test
+    public void testDoAnyTrick3(){
+        boolean result = AnimalManagerFP.doManyTricks(
+                (trick1, trick2) -> true
+        );
+        assertTrue(result);
+    }
+
+    /**
+     * Named Lambda function implementing ITrainable3 interface
+     */
+    @Test
+    public void testDoAnyTrick3_namedLambda(){
+        ITrainable3 animalToTrainAsNamedLambda =
+                (trick1, trick2) -> true;
+
+        boolean result = AnimalManagerFP.doManyTricks(animalToTrainAsNamedLambda);
+        assertTrue(result);
+    }
+
 }

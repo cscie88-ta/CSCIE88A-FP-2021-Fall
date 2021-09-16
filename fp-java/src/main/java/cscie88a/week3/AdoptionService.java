@@ -2,7 +2,8 @@ package cscie88a.week3;
 
 public class AdoptionService {
 
-    public boolean tryToAdoptNoArg(IAdoptable someoneToAdopt, boolean adoptionFeePaid) {
+    public boolean tryToAdoptNoArg(
+            IAdoptable someoneToAdopt, boolean adoptionFeePaid) {
         if (someoneToAdopt.readyForAdoptionNoArg() && adoptionFeePaid) {
             return true;
         } else
