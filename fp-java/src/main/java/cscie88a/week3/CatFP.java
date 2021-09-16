@@ -5,9 +5,22 @@ public class CatFP  implements ITrainableFP {
 	private boolean goodMood = false;
 	private String name;
 
+	// class level method - always returns TRUE
+	public static boolean checkForAdoptionStatusStatic() {
+		return true;
+	};
+
 	public CatFP(String name) {
 		this.name = name;
 	}
+
+	// instance level method - has access to instance state
+	public boolean checkForAdoptionStatusInstance() {
+		if (goodMood)
+			return true;
+		else
+			return false;
+	};
 
 	@Override
 	public boolean doTrick(String trickName) {
