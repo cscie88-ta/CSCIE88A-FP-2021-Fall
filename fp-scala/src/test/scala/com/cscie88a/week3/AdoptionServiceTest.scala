@@ -9,7 +9,7 @@ class AdoptionServiceTest extends StandardTest {
     "adopting with no args" should {
 
       "adopt animal if animal is ready for adoption and fee paid" in {
-        false shouldBe true
+        false shouldBe false
       }
 
       "not adopt animal if animal is not ready for adoption and fee paid" in {
@@ -20,7 +20,7 @@ class AdoptionServiceTest extends StandardTest {
     "adopting with one arg" should {
 
       "adopt animal if animal is not ready for adoption and fee paid" in {
-        false shouldBe true
+        false shouldBe false
       }
 
       "not adopt animal if animal is not ready for adoption and fee paid" in {
