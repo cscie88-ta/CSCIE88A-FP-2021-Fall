@@ -2,7 +2,7 @@ package cscie88a.week5.hw;
 
 import org.junit.jupiter.api.Test;
 
-class StreamHW6Test {
+class StreamHW5Test {
 
     @Test
     void testCheckForHealthyAnimals() {
@@ -38,12 +38,7 @@ class StreamHW6Test {
     void testGetAnimalCountsByType() {
         //TODO implement this
     }
-
-    @Test
-    void testGetAnimalCountsByType2() {
-        //TODO implement this
-    }
-
+    
     @Test
     void testGetRandomizedInfiniteStream() {
         //TODO implement this
