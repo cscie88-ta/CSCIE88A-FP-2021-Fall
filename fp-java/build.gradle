@@ -68,7 +68,7 @@ task runMessageProducer(type: JavaExec) {
     group = "Execution"
     description = "Runs kafka message producer"
     classpath = sourceSets.main.runtimeClasspath
-    main = "cscie88a.week9.generator.KafkaDataGenerator"
+    main = "cscie88a.week8.generator.KafkaDataGenerator"
 }
 
 task runConsumerStream(type: JavaExec) {
@@ -76,7 +76,7 @@ task runConsumerStream(type: JavaExec) {
     group = "Execution"
     description = "Runs kafka streams"
     classpath = sourceSets.main.runtimeClasspath
-    main = "cscie88a.week9.kafka.ConsumerStreams"
+    main = "cscie88a.week8.kafka.ConsumerStreams"
 }
 
 
