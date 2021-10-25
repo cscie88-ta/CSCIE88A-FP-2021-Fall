@@ -5,7 +5,7 @@ object Dependencies {
     "org.scalatest" %% "scalatest" % "3.0.8" % Test
   )
 
-  val circeVersion = "0.11.0"
+  val circeVersion = "0.13.0"
   val fs2Version = "2.2.1"
 
   lazy val core = Seq(
@@ -18,6 +18,12 @@ object Dependencies {
     // support for JSON formats
     "io.circe" %% "circe-core" % circeVersion,
     "io.circe" %% "circe-generic" % circeVersion,
+    "io.circe" %% "circe-parser" % circeVersion,
+
+    // kafka streams
+    "org.apache.kafka" %% "kafka-streams-scala" % "2.8.1",
+    "com.goyeau" %% "kafka-streams-circe" % "0.6.3",
+
     // akka streams and alpakka
     "com.typesafe.akka" %% "akka-stream" % "2.5.23",
     "com.lightbend.akka" %% "akka-stream-alpakka-file" % "1.0.2",
