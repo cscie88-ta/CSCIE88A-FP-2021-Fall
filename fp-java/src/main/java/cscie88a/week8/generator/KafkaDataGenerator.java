@@ -23,14 +23,14 @@ import java.util.concurrent.TimeUnit;
 public class    KafkaDataGenerator {
     private static final ObjectMapper OBJECT_MAPPER = new ObjectMapper();
     public static final Instant DEFAULT_START_DATE = Instant.now().truncatedTo(ChronoUnit.DAYS);
-    public static final String DEFAULT_DAYS = "7";
+    public static final String DEFAULT_DAYS = "1";
     public static final String DEFAULT_TEST_TOPIC = "test";
     public static final String DEFAULT_KAFKA_URL = "localhost:9092";
     private String kafkaTopic ;
     private String kafkaUrl ;
     private String streamingFlag;
     private Integer streamingIntervalSec;
-    Set<String> sensorIdList = FileReader.readAllValuesFile("input/sensor-id.txt");
+    Set<String> sensorIdList = FileReader.readAllValuesFile("input/sensor-id-small.txt");
     String[] sensorIdArray, sensorTypeArray, windDirectionArray, zipCodeArray;
 
     Set<String> sensorTypeList = FileReader.readAllValuesFile("input/sensor-type.txt");
@@ -90,8 +90,10 @@ public class    KafkaDataGenerator {
                 SensorEvent event = new SensorEvent();
 
                 event.setEventId(UUID.randomUUID().toString());
-                long randomEventTimestampWithinRange = dayBeginningEpoch.toEpochMilli() + ThreadLocalRandom.current().nextLong(0, daysInMillis);
-                event.setEventTimestamp(randomEventTimestampWithinRange);
+                //long randomEventTimestampWithinRange = dayBeginningEpoch.toEpochMilli() + ThreadLocalRandom.current().nextLong(0, daysInMillis);
+                //event.setEventTimestamp(randomEventTimestampWithinRange);
+                // for windowing operations - we can just set the current timestamp as the event time - to see results faster
+                event.setEventTimestamp(System.currentTimeMillis());
 
                 int sensorIdRandomIndex = ThreadLocalRandom.current().nextInt(0, sensorIdList.size());
                 event.setSensorId(sensorIdArray[sensorIdRandomIndex]);
