@@ -32,7 +32,7 @@ public class ConsumerStreams {
     }
 
     public ConsumerStreams() {
-        kafkaTopic = System.getProperty("input_topic", "test_topic");
+        kafkaTopic = System.getProperty("kafka_topic", "input_topic");
         kafkaUrl = System.getProperty("kafka_url", "localhost:9092");
         consumerName = System.getProperty("kafka_consumer_id", "hw9-consumer");
         String sensor_type_count_topic = System.getProperty("sensor_type_count_topic", "sensor_type_count_topic");
